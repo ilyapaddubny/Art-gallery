@@ -36,7 +36,6 @@ class ArtistsVC: UIViewController {
     
     private func configureUI() {
         configureTableView()
-        
     }
     
     private func configureTableView() {
@@ -87,10 +86,10 @@ class ArtistsVC: UIViewController {
 extension ArtistsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let artistGalleryVC = ArtistGalleryVC()
+        let artistGalleryVC = ArtistGalleryVC(artist: artists[indexPath.row])
         artistGalleryVC.navigationItem.title = artists[indexPath.row].name
         
-        navigationController?.pushViewController(artistGalleryVC, animated: true)
+        navigationController?.pushViewController(artistGalleryVC, animated: false) //TODO: animated true works bad. Figure out WTF
     }
     
     
