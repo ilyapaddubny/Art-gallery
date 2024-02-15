@@ -15,6 +15,8 @@
 		2D2DF5812B7D05200015C73F /* PieceOfArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DF5802B7D05200015C73F /* PieceOfArt.swift */; };
 		2D2DF5842B7D0C420015C73F /* ArtistsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DF5832B7D0C420015C73F /* ArtistsVC.swift */; };
 		2D2DF5862B7D1D5C0015C73F /* ArtistGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DF5852B7D1D5B0015C73F /* ArtistGalleryVC.swift */; };
+		2D2DF5892B7E29440015C73F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DF5882B7E29440015C73F /* DataManager.swift */; };
+		2D2DF58B2B7E2FE60015C73F /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DF58A2B7E2FE60015C73F /* ArtistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		2D2DF5832B7D0C420015C73F /* ArtistsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsVC.swift; sourceTree = "<group>"; };
 		2D2DF5852B7D1D5B0015C73F /* ArtistGalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistGalleryVC.swift; sourceTree = "<group>"; };
 		2D2DF5872B7E184E0015C73F /* Art gallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Art gallery.entitlements"; sourceTree = "<group>"; };
+		2D2DF5882B7E29440015C73F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2D2DF58A2B7E2FE60015C73F /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				2D2DF56A2B7CF0600015C73F /* AppDelegate.swift */,
 				2D2DF56C2B7CF0600015C73F /* SceneDelegate.swift */,
 				2D2DF5832B7D0C420015C73F /* ArtistsVC.swift */,
+				2D2DF58A2B7E2FE60015C73F /* ArtistTableViewCell.swift */,
+				2D2DF5882B7E29440015C73F /* DataManager.swift */,
 				2D2DF5732B7CF0630015C73F /* Assets.xcassets */,
 				2D2DF5752B7CF0630015C73F /* LaunchScreen.storyboard */,
 				2D2DF5782B7CF0630015C73F /* Info.plist */,
@@ -156,8 +162,10 @@
 				2D2DF5862B7D1D5C0015C73F /* ArtistGalleryVC.swift in Sources */,
 				2D2DF5842B7D0C420015C73F /* ArtistsVC.swift in Sources */,
 				2D2DF56B2B7CF0600015C73F /* AppDelegate.swift in Sources */,
+				2D2DF5892B7E29440015C73F /* DataManager.swift in Sources */,
 				2D2DF57F2B7D04AB0015C73F /* Artist.swift in Sources */,
 				2D2DF56D2B7CF0600015C73F /* SceneDelegate.swift in Sources */,
+				2D2DF58B2B7E2FE60015C73F /* ArtistTableViewCell.swift in Sources */,
 				2D2DF5812B7D05200015C73F /* PieceOfArt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
