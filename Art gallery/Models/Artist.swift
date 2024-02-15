@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct Artist {
+struct Artist: Codable {
     let name: String
     let bio: String
     let image: String
     let works: [PieceOfArt]
+}
+
+struct ArtistsData: Codable {
+    let artists: [Artist]
 }
 

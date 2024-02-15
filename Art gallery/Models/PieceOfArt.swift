@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PieceOfArt {
+struct PieceOfArt: Codable {
     let title: String
     let image: String
     let info: String
