@@ -11,6 +11,8 @@ class PieceOfArtVC: UIViewController {
     
     let pieceOfArt: PieceOfArt
     
+    let scrollView = UIScrollView()
+    let contentView = UIView()
     let pieceOfArtImage = UIImageView()
     let pieceOfArtDescription = UILabel()
     
@@ -21,26 +23,53 @@ class PieceOfArtVC: UIViewController {
     }
     
     private func configureUI() {
+        configureScrollView()
+        configureContentView()
         configurePieceOfArtImage()
         configurePieceOfArtLabel()
     }
     
+    private func configureScrollView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    private func configureContentView() {
+        contentView.addSubview(pieceOfArtImage)
+        contentView.addSubview(pieceOfArtDescription)
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+    
+    }
+    
+    
     private func configurePieceOfArtImage() {
-        view.addSubview(pieceOfArtImage)
         pieceOfArtImage.image = UIImage(named: pieceOfArt.image)
         
         pieceOfArtImage.translatesAutoresizingMaskIntoConstraints = false
         
         pieceOfArtImage.heightAnchor.constraint(equalToConstant: 350).isActive = true
-        pieceOfArtImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 26).isActive = true
-        pieceOfArtImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-        pieceOfArtImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        pieceOfArtImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 26).isActive = true
+        pieceOfArtImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        pieceOfArtImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         
         pieceOfArtImage.contentMode = .scaleAspectFit
     }
     
     private func configurePieceOfArtLabel() {
-        view.addSubview(pieceOfArtDescription)
         
         pieceOfArtDescription.text = pieceOfArt.info
         pieceOfArtDescription.textAlignment = .center
@@ -48,9 +77,10 @@ class PieceOfArtVC: UIViewController {
         pieceOfArtDescription.translatesAutoresizingMaskIntoConstraints = false
         
         pieceOfArtDescription.topAnchor.constraint(equalTo: pieceOfArtImage.bottomAnchor, constant: 16).isActive = true
-        pieceOfArtDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-        pieceOfArtDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-    
+        pieceOfArtDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+        pieceOfArtDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        pieceOfArtDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16).isActive = true
+
         pieceOfArtDescription.numberOfLines = 0
     }
     

@@ -17,7 +17,7 @@ class ArtistGalleryVC: UIViewController {
         
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: 150, height: 150)
-
+        
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
     
@@ -66,6 +66,7 @@ class ArtistGalleryVC: UIViewController {
         
         
         view.addSubview(collectionView)
+//        collectionView.isScrollEnabled = false
         
         collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "ImageCell")
         collectionView.delegate = self
@@ -95,7 +96,7 @@ extension ArtistGalleryVC: UICollectionViewDelegate, UICollectionViewDataSource 
         let pieceOfArtVC = PieceOfArtVC(pieceOfArt: artist.works[indexPath.row])
         pieceOfArtVC.title = artist.works[indexPath.row].title
         
-        navigationController?.pushViewController(pieceOfArtVC, animated: false)
+        navigationController?.pushViewController(pieceOfArtVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

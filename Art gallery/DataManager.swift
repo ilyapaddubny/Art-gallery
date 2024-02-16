@@ -53,7 +53,7 @@ class DataManager {
 
 extension DataManager {
     private struct Constants {
-        static let artistURLString = "https://file.notion.so/f/f/b8bbfa88-ab7c-464e-8c0e-1c109af93066/8c0c0258-c23a-4229-ae76-b515867cc1d8/artists.json?id=65f3a8fb-a15e-48f4-a7ed-f75be1b2f4fb&table=block&spaceId=b8bbfa88-ab7c-464e-8c0e-1c109af93066&expirationTimestamp=1708005600000&signature=BqHK8Pd5dUdAbQyCCHky4wrWjAxXXgzjq9moJlYFvFc&downloadName=artists.json"
+        static let artistURLString = "https://file.notion.so/f/f/b8bbfa88-ab7c-464e-8c0e-1c109af93066/8c0c0258-c23a-4229-ae76-b515867cc1d8/artists.json?id=65f3a8fb-a15e-48f4-a7ed-f75be1b2f4fb&table=block&spaceId=b8bbfa88-ab7c-464e-8c0e-1c109af93066&expirationTimestamp=1708185600000&signature=mLBBliSIPEigEuoSArut-pHysMAsEMNNydsOlxJhC14&downloadName=artists.json"
     }
     
     enum NetworkError: Error {
